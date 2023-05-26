@@ -1,0 +1,64 @@
+@use "fonts" as *;
+@use "breakpoints" as *;
+header {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+.headerwrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-between;
+  @include breakpoint(900px) {
+    align-items: flex-start;
+  }
+  flex: 1;
+  background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
+  background-position: 50% 50%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  @include breakpoint(900px) {
+    margin: 0px 30px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-self: self-start;
+    @include breakpoint(900px) {
+      align-self: self-start;
+    }
+    h1 {
+      font-family: $font-tetra;
+      font-size: 54px;
+      color: white;
+      margin: 0;
+      @include breakpoint(900px) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+    h2 {
+      color: var(--color-red);
+      font-size: 17px;
+      margin: 5px 0px;
+      font-family: $font-tertiary;
+      font-weight: 600;
+    }
+    h3 {
+      margin: 10px 0px;
+      color: var(--color-grey);
+      font-size: 14px;
+      font-family: $font-penta;
+      text-transform: capitalize;
+    }
+    &__avatar {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

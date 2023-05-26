@@ -1,0 +1,13 @@
+@use "fonts" as *;
+#main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 60px;
+  h1 {
+    font-family: $font-tetra;
+    font-size: 54px;
+  }
+}
