@@ -35,15 +35,17 @@ html {
   --color-red: #e11d48;
   --color-dark: #00050b;
   --color-grey: #747474;
+  --color-white: #ffffff;
 }
 
 body {
   background-color: var(--color-dark);
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .image-5 {
-  position: absolute;
+  position: fixed;
   left: auto;
   top: 0;
   right: 0;
@@ -53,16 +55,31 @@ body {
 }
 
 .bgleft {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 50%;
   z-index: -1;
   width: 50%;
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 30px;
+  align-self: stretch;
+  border-bottom: 1px dashed hsla(0, 0%, 100%, 0.2);
+}
+
+/* Hide pagination */
+.splide__pagination {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 90vh;
 }
 
@@ -72,11 +89,12 @@ header {
   flex-direction: row;
   flex-wrap: wrap-reverse;
   align-items: center;
+  width: 85%;
   justify-content: space-between;
   flex: 1;
   background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
   background-position: 50% 50%;
-  background-size: 90%;
+  background-size: 50%;
   background-repeat: no-repeat;
 }
 @media (max-width: 900px) {
@@ -86,7 +104,7 @@ header {
 }
 @media (max-width: 900px) {
   .headerwrapper {
-    margin: 0px 30px;
+    background-size: 100%;
   }
 }
 .headerwrapper__title {
@@ -95,6 +113,10 @@ header {
   margin: 0;
   padding: 0;
   justify-self: self-start;
+}
+.headerwrapper__title__links {
+  margin: 30px 0px;
+  align-self: self-start;
 }
 @media (max-width: 900px) {
   .headerwrapper__title {
@@ -118,7 +140,7 @@ header {
   font-size: 17px;
   margin: 5px 0px;
   font-family: "Product Sans";
-  font-weight: 600;
+  font-weight: 400;
 }
 .headerwrapper__title h3 {
   margin: 10px 0px;
@@ -132,15 +154,29 @@ header {
   padding: 0;
 }
 
-#main {
+.main {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 60px;
+  width: 85%;
+  padding: 90px 0px;
 }
-#main h1 {
+.main__about h1 {
   font-family: "Rza";
   font-size: 54px;
+  color: var(--color-red);
+}
+@media (max-width: 900px) {
+  .main__about h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.main__about p {
+  margin: 10px 0px;
+  color: var(--color-grey);
+  text-align: left;
+  font-family: "Product Sans";
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */

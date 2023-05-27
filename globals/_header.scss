@@ -3,6 +3,8 @@
 header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 90vh;
 }
 .headerwrapper {
@@ -11,6 +13,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap-reverse;
   align-items: center;
+  width: 85%;
   justify-content: space-between;
   @include breakpoint(900px) {
     align-items: flex-start;
@@ -18,10 +21,10 @@ header {
   flex: 1;
   background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
   background-position: 50% 50%;
-  background-size: 90%;
+  background-size: 50%;
   background-repeat: no-repeat;
   @include breakpoint(900px) {
-    margin: 0px 30px;
+    background-size: 100%;
   }
   &__title {
     display: flex;
@@ -29,6 +32,10 @@ header {
     margin: 0;
     padding: 0;
     justify-self: self-start;
+    &__links {
+      margin: 30px 0px;
+      align-self: self-start;
+    }
     @include breakpoint(900px) {
       align-self: self-start;
     }
@@ -47,7 +54,7 @@ header {
       font-size: 17px;
       margin: 5px 0px;
       font-family: $font-tertiary;
-      font-weight: 600;
+      font-weight: 400;
     }
     h3 {
       margin: 10px 0px;
