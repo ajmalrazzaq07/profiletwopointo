@@ -1,29 +1,6 @@
-<svg
-            width="74"
-            height="74"
-            viewBox="0 0 10873 8632"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            
-          >
-            <path
-              d="M7236.47 4484.5L5436 7603L3635.53 4484.5L7236.47 4484.5Z"
-              stroke="#e11d48"
-              stroke-width="523"
-            />
-            <path
-              d="M4233.96 2305L5436 223L6638.04 2305H4233.96Z"
-              stroke="white"
-              stroke-width="523"
-            />
-            <path
-              d="M8275.12 8520L9477.17 6438L10679.2 8520H8275.12Z"
-              stroke="white"
-              stroke-width="523"
-            />
-            <path
-              d="M193.124 8520L1395.17 6438L2597.21 8520H193.124Z"
-              stroke="white"
-              stroke-width="523"
-            />
-          </svg>
+<svg width="82" height="70" viewBox="0 0 154 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 129L23 99L40 129H6Z" stroke="white" stroke-width="6"/>
+<path d="M114 129L131 99L148 129H114Z" stroke="white" stroke-width="6"/>
+<path d="M60 37L77 7L94 37H60Z" stroke="white" stroke-width="6"/>
+<path d="M102 69L77 114L52 69H102Z" stroke="#E11D48" stroke-width="6"/>
+</svg>

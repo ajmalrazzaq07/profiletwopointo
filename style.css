@@ -1,9 +1,19 @@
 *,
 html {
-  margin: 0 auto;
+  margin: 0;
   box-sizing: border-box;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+nav {
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 @font-face {
@@ -36,6 +46,7 @@ html {
   --color-dark: #00050b;
   --color-grey: #747474;
   --color-white: #ffffff;
+  --color-pink: rgb(225, 29, 72, 0.5);
 }
 
 body {
@@ -81,6 +92,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 90vh;
+  margin: 0 auto;
 }
 
 .headerwrapper {
@@ -90,6 +102,7 @@ header {
   flex-wrap: wrap-reverse;
   align-items: center;
   width: 85%;
+  margin: 0 auto;
   justify-content: space-between;
   flex: 1;
   background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
@@ -114,14 +127,41 @@ header {
   padding: 0;
   justify-self: self-start;
 }
+.headerwrapper__title__logo {
+  margin: 10px 2px;
+}
 .headerwrapper__title__links {
   margin: 30px 0px;
   align-self: self-start;
+}
+.headerwrapper__title__links a {
+  text-decoration: none;
 }
 @media (max-width: 900px) {
   .headerwrapper__title {
     align-self: self-start;
   }
+}
+.headerwrapper__title__btn {
+  margin: 0;
+}
+.headerwrapper__title__btn button {
+  background: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10000px;
+  height: 36px;
+  padding: 0px 18px;
+  font-size: 14px;
+  font-family: "Product Sans";
+  -webkit-backdrop-filter: 8px;
+          backdrop-filter: 8px;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+.headerwrapper__title__btn button:hover {
+  background: var(--color-white);
+  color: black;
 }
 .headerwrapper__title h1 {
   font-family: "Rza";
@@ -149,34 +189,59 @@ header {
   font-family: "Roboto Mono", monospace;
   text-transform: capitalize;
 }
-.headerwrapper__title__avatar {
-  margin: 0;
-  padding: 0;
+.headerwrapper__avatar {
+  margin: 0 auto;
 }
 
-.main {
+.sectionabout {
   height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   width: 85%;
-  padding: 90px 0px;
+  padding: 100px 0px;
+  margin: 0 auto;
 }
-.main__about h1 {
+.sectionabout__about {
+  width: 50%;
+}
+@media (max-width: 900px) {
+  .sectionabout__about {
+    width: 100%;
+    margin: 0;
+  }
+}
+.sectionabout__about h1 {
   font-family: "Rza";
   font-size: 54px;
+  color: white;
+  margin: 0;
   color: var(--color-red);
 }
 @media (max-width: 900px) {
-  .main__about h1 {
+  .sectionabout__about h1 {
     font-size: 30px;
     line-height: 36px;
   }
 }
-.main__about p {
-  margin: 10px 0px;
+.sectionabout__about p {
   color: var(--color-grey);
-  text-align: left;
+  font-size: 15px;
+  margin: 10px 0px;
+  line-height: 1.4em;
   font-family: "Product Sans";
-  text-transform: capitalize;
+}
+.sectionabout__about__skillcontainer {
+  display: flex;
+  margin: 10px 0px;
+  flex-direction: row;
+  gap: 20px;
+}
+.sectionabout__about__skillcontainer__skill h2 {
+  color: var(--color-white);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */

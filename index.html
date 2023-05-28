@@ -23,6 +23,7 @@
   </head>
   <body>
     <div class="splide">
+      <nav><img src="logo copy.svg" alt="" /></nav>
       <div class="splide__arrows">
         <button
           class="splide__arrow splide__arrow--prev"
@@ -42,12 +43,12 @@
             ></path>
           </svg></button
         ><button
-          class="splide__arrow splide__arrow--next"
+          class="splide__arrow splide__arrow--next wobble-hor-bottom"
           type="button"
           aria-controls="splide01-track"
           aria-label="Next slide"
           disabled=""
-          style="right: inherit; background: none; bottom: 3em"
+          style="right: inherit; background: none; bottom: 2em; left: 50%"
         >
           <img src="scroll.svg" alt="" />
         </button>
@@ -56,50 +57,34 @@
       <div class="splide__track">
         <div class="splide__list">
           <img src="overlay.svg" alt="" class="image-5" />
-          <header class="splide__slide">
+          <header
+            class="splide__slide"
+            data-aos="fade"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="center-center"
+          >
             <div class="headerwrapper">
               <div class="headerwrapper__title">
-                <svg
-                  width="74"
-                  height="74"
-                  viewBox="0 0 10873 8632"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style="margin: 10px 3px"
-                  data-aos="zoom-in"
-                  data-aos-duration="1200"
-                >
-                  <path
-                    d="M7236.47 4484.5L5436 7603L3635.53 4484.5L7236.47 4484.5Z"
-                    stroke="#e11d48"
-                    stroke-width="523"
+                <div class="headerwrapper__title__logo">
+                  <img
+                    src="logo.svg"
+                    alt=""
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                    data-aos-anchor-placement="center-center"
                   />
-                  <path
-                    d="M4233.96 2305L5436 223L6638.04 2305H4233.96Z"
-                    stroke="white"
-                    stroke-width="523"
-                  />
-                  <path
-                    d="M8275.12 8520L9477.17 6438L10679.2 8520H8275.12Z"
-                    stroke="white"
-                    stroke-width="523"
-                  />
-                  <path
-                    d="M193.124 8520L1395.17 6438L2597.21 8520H193.124Z"
-                    stroke="white"
-                    stroke-width="523"
-                  />
-                </svg>
-                <h1 data-aos="fade" data-aos-duration="1200">
+                </div>
+
+                <h1 data-aos="fade" data-aos-duration="1500">
                   I'M Ajmal Razzaq
                 </h1>
-                <h2 data-aos="fade-up" data-aos-duration="1200">
+                <h2 data-aos="fade-up" data-aos-duration="1500">
                   — A Creative frontend developer
                 </h2>
 
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="1200"
+                  data-aos-duration="1500"
                   data-aos-once="false"
                 >
                   Just an introvert Coding his thoughts into designs
@@ -107,49 +92,90 @@
                 <div
                   class="headerwrapper__title__links"
                   data-aos="fade-up"
-                  data-aos-duration="1200"
+                  data-aos-duration="1500"
                 >
-                  <img
-                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/link.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/youtube.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/dribble.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/linkedin.svg"
-                    alt=""
-                  />
+                  <a href="">
+                    <img
+                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/link.svg"
+                      alt=""
+                  /></a>
+                  <a href="">
+                    <img
+                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/youtube.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/dribble.svg"
+                      alt=""
+                  /></a>
+                  <a href="">
+                    <img
+                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/linkedin.svg"
+                      alt=""
+                  /></a>
+                </div>
+                <div
+                  class="headerwrapper__title__btn"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                >
+                  <a href=""><button>Recruit me</button></a>
                 </div>
               </div>
               <div
                 class="headerwrapper__avatar"
                 data-aos="fade"
-                data-aos-duration="1200"
+                data-aos-duration="1500"
               >
                 <img src="silly wave.png" alt="" height="250px" />
               </div>
             </div>
           </header>
           <div id="splide01-slide02" class="splide__slide">
-            <div id="main" class="main">
-              <div class="main__about">
-                <h1 data-aos-duration="1200">About Me</h1>
+          <div id="sectionabout" class="sectionabout">
+              <div class="sectionabout__avatar">
+                <img src="lotus pose.png" alt="" height="250px" />
+              </div>
+              <div class="sectionabout__about">
+                <h1>Who am i?</h1>
                 <p>
-                  Oh, brace yourselves, folks, for the grand arrival of Ajmal
-                  Razzaq Bhatti, the self-proclaimed unparalleled master of
-                  frontend development! 💥 As he valiantly takes on open source
-                  projects 🌍 And if that wasn't enough, he also finds time to
-                  pursue a BSCS degree from the prestigious FAST-NUCES, because
-                  apparently, the world needs yet another genius in academia.
-                  🎓✨
+                  Oh, well, well, well, look who we have here! It's AJMAL RAZZAQ
+                  BHATTI, the self-proclaimed frontend wizard who's taking the
+                  world by storm with his HTML, CSS, SCSS, and JS skills. 💻🎨✨
                 </p>
-                <div class="divider"></div>
+                <h1>Skills i have</h1>
+                <div class="sectionabout__about__skillcontainer">
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>html</h2>
+                    <p>1 year experiance</p>
+                  </div>
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>css</h2>
+                    <p>1 year experiance</p>
+                  </div>
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>scss</h2>
+                    <p>6 months experiance</p>
+                  </div>
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>js</h2>
+                    <p>6 months experiance</p>
+                  </div>
+                </div>
+                <h1>Tools i can use</h1>
+                <div class="sectionabout__about__skillcontainer">
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>vs-code</h2>
+                  </div>
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>figma</h2>
+                  </div>
+                  <div class="sectionabout__about__skillcontainer__skill">
+                    <h2>github</h2>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
