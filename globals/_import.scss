@@ -12,11 +12,19 @@
   src: url(/profiletwopointo/fonts/LEMONMILK-Medium.woff2) format("woff2");
 }
 @font-face {
-    font-family: 'New York Medium';
-    src: url('https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/5e024a6f8d72cc2d638a5ede_NewYorkMedium-Heavy.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: auto;
+  font-family: "New York Medium";
+  src: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/5e024a6f8d72cc2d638a5ede_NewYorkMedium-Heavy.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
 }
 
-@font-face{font-family:"Rza";src:url(https://www.upwork.com/static/fonts-global/4.0.1/rza-regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face {
+  font-family: "Rza";
+  src: url(https://www.upwork.com/static/fonts-global/4.0.1/rza-regular.woff2)
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio || Ajmal Razzaq Bhatti</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,600&family=Poppins:wght@300;400&family=Roboto+Mono&display=swap"
@@ -57,43 +56,20 @@
       <div class="splide__track">
         <div class="splide__list">
           <img src="overlay.svg" alt="" class="image-5" />
-          <header
-            class="splide__slide"
-            data-aos="fade"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="center-center"
-          >
+          <header class="splide__slide">
             <div class="headerwrapper">
               <div class="headerwrapper__title">
                 <div class="headerwrapper__title__logo">
-                  <img
-                    src="logo.svg"
-                    alt=""
-                    data-aos="zoom-in"
-                    data-aos-duration="1500"
-                    data-aos-anchor-placement="center-center"
-                  />
+                  <img src="logo.svg" alt="" class="text-focus-in" />
                 </div>
 
-                <h1 data-aos="fade" data-aos-duration="1500">
-                  I'M Ajmal Razzaq
-                </h1>
-                <h2 data-aos="fade-up" data-aos-duration="1500">
-                  — A Creative frontend developer
-                </h2>
+                <h1 class="text-focus-in">I'M Ajmal Razzaq</h1>
+                <h2 class="slide-in-bottom">— A Creative frontend developer</h2>
 
-                <h3
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
-                  data-aos-once="false"
-                >
+                <h3 class="slide-in-bottom">
                   Just an introvert Coding his thoughts into designs
                 </h3>
-                <div
-                  class="headerwrapper__title__links"
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
-                >
+                <div class="headerwrapper__title__links slide-in-bottom">
                   <a href="">
                     <img
                       src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/link.svg"
@@ -116,27 +92,24 @@
                       alt=""
                   /></a>
                 </div>
-                <div
-                  class="headerwrapper__title__btn"
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
-                >
+                <div class="headerwrapper__title__btn slide-in-bottom">
                   <a href=""><button>Recruit me</button></a>
                 </div>
               </div>
-              <div
-                class="headerwrapper__avatar"
-                data-aos="fade"
-                data-aos-duration="1500"
-              >
-                <img src="silly wave.png" alt="" height="250px" />
+              <div class="headerwrapper__avatar">
+                <img
+                  src="silly wave.png"
+                  alt=""
+                  height="250px"
+                  class="flicker-in-1"
+                />
               </div>
             </div>
           </header>
           <div id="splide01-slide02" class="splide__slide">
-          <div id="sectionabout" class="sectionabout">
+            <div id="sectionabout" class="sectionabout">
               <div class="sectionabout__avatar">
-                <img src="lotus pose.png" alt="" height="250px" />
+                <img src="lotus pose.png" alt="" height="250px" id="image" />
               </div>
               <div class="sectionabout__about">
                 <h1>Who am i?</h1>
@@ -182,9 +155,6 @@
         </div>
       </div>
     </div>
-    <script>
-      AOS.init();
-    </script>
 
     <script src="https://byjaris.com/code/demo/splide-blur/js/jquery.min.js"></script>
     <script src="https://byjaris.com/code/demo/splide-blur/splide/splide.min.js"></script>

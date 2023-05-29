@@ -6,9 +6,12 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  overflow: auto;
+  justify-content: space-between;
+  @include breakpoint(900px) {
+    justify-content: center;
+  }
   width: 85%;
-  padding: 100px 0px;
   margin: 0 auto;
   &__avatar {
   }
@@ -38,15 +41,21 @@
     }
     &__skillcontainer {
       display: flex;
-      margin: 10px 0px;
+      margin: 10px 3px;
       flex-direction: row;
       gap: 20px;
       &__skill {
         h2 {
           color: var(--color-white);
-          font-family: $font-penta;
+          font-family: $font-tertiary;
           font-weight: 400;
           font-size: 17px;
+          text-transform: capitalize;
+        }
+        p {
+          font-size: 13px;
+          font-family: $font-penta;
+          text-transform: capitalize;
         }
       }
     }
