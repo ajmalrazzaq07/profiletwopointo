@@ -1,154 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="author" content="BCJ Development" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio || Ajmal Razzaq Bhatti</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,600&family=Poppins:wght@300;400&family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://byjaris.com/code/demo/splide-blur/splide/splide.core.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://byjaris.com/code/demo/splide-blur/splide/splide.video.css"
-    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Butter.js - Smooth Momentum Scrolling</title>
+    <!-- <script src="https://kit.fontawesome.com/1337a25535.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="sample/butter.css" />
   </head>
   <body>
-    <div class="splide">
-      <nav><img src="logo copy.svg" alt="" /></nav>
-      <div class="splide__arrows">
-        <button
-          class="splide__arrow splide__arrow--prev"
-          type="button"
-          aria-controls="splide01-track"
-          aria-label="Previous slide"
-          style="display: none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 40 40"
-            width="40"
-            height="40"
-          >
-            <path
-              d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
-            ></path>
-          </svg></button
-        ><button
-          class="splide__arrow splide__arrow--next wobble-hor-bottom"
-          type="button"
-          aria-controls="splide01-track"
-          aria-label="Next slide"
-          disabled=""
-          style="right: inherit; background: none; bottom: 2em; left: 50%"
-        >
-          <img src="scroll.svg" alt="" />
-        </button>
-      </div>
-      <img src="overlay2.svg" alt="" class="bgleft" />
-      <div class="splide__track">
-        <div class="splide__list">
-          <img src="overlay.svg" alt="" class="image-5" />
-          <header class="splide__slide">
-            <div class="headerwrapper">
-              <div class="headerwrapper__title">
-                <div class="headerwrapper__title__logo">
-                  <img src="logo.svg" alt="" class="text-focus-in" />
-                </div>
-
-                <h1 class="text-focus-in">I'M Ajmal Razzaq</h1>
-                <h2 class="slide-in-bottom">— A Creative frontend developer</h2>
-
-                <h3 class="slide-in-bottom">
-                  Just an introvert Coding his thoughts into designs
-                </h3>
-                <div class="headerwrapper__title__links slide-in-bottom">
-                  <a href="">
-                    <img
-                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/link.svg"
-                      alt=""
-                  /></a>
-                  <a href="">
-                    <img
-                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/youtube.svg"
-                      alt=""
-                    />
-                  </a>
-                  <a href="">
-                    <img
-                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/dribble.svg"
-                      alt=""
-                  /></a>
-                  <a href="">
-                    <img
-                      src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/linkedin.svg"
-                      alt=""
-                  /></a>
-                </div>
-                <div class="headerwrapper__title__btn slide-in-bottom">
-                  <a href=""><button>Recruit me</button></a>
-                </div>
-              </div>
-              <div class="headerwrapper__avatar">
+    <img src="overlay2.svg" alt="" class="bgleft" />
+    <div id="loading">Loading...</div>
+    <img src="overlay.svg" alt="" class="image-5" />
+    <div id="butter" style="position: fixed; width: 100%">
+      <div class="section white-div">
+        <header>
+          <div class="headerwrapper">
+            <div class="headerwrapper__title">
+              <div class="headerwrapper__title__logo">
                 <img
-                  src="silly wave.png"
+                  src="logo.svg"
                   alt=""
-                  height="250px"
-                  class="flicker-in-1"
+                  data-aos="zoom-in"
+                  data-aos-duration="3000"
                 />
               </div>
-            </div>
-          </header>
-          <div id="splide01-slide02" class="splide__slide">
-            <div id="sectionabout" class="sectionabout">
-              <div class="sectionabout__avatar">
-                <img src="lotus pose.png" alt="" height="250px" id="image" />
+
+              <h1
+                data-aos="fade"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              >
+                I'M Ajmal Razzaq
+              </h1>
+              <h2
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              >
+                — A Creative frontend developer
+              </h2>
+
+              <h3
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              >
+                Just an introvert Coding his thoughts into designs
+              </h3>
+              <div
+                class="headerwrapper__title__links"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              >
+                <a href="">
+                  <img
+                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/link.svg"
+                    alt=""
+                /></a>
+                <a href="">
+                  <img
+                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/youtube.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/dribble.svg"
+                    alt=""
+                /></a>
+                <a href="">
+                  <img
+                    src="https://raw.githubusercontent.com/ajmalrazzaq07/ajmalrazzaq07/main/linkedin.svg"
+                    alt=""
+                /></a>
               </div>
-              <div class="sectionabout__about">
-                <h1>Who am i?</h1>
-                <p>
-                  Oh, well, well, well, look who we have here! It's AJMAL RAZZAQ
-                  BHATTI, the self-proclaimed frontend wizard who's taking the
-                  world by storm with his HTML, CSS, SCSS, and JS skills. 💻🎨✨
-                </p>
-                <h1>Skills i have</h1>
-                <div class="sectionabout__about__skillcontainer">
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>html</h2>
-                    <p>1 year experiance</p>
-                  </div>
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>css</h2>
-                    <p>1 year experiance</p>
-                  </div>
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>scss</h2>
-                    <p>6 months experiance</p>
-                  </div>
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>js</h2>
-                    <p>6 months experiance</p>
-                  </div>
-                </div>
-                <h1>Tools i can use</h1>
-                <div class="sectionabout__about__skillcontainer">
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>vs-code</h2>
-                  </div>
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>figma</h2>
-                  </div>
-                  <div class="sectionabout__about__skillcontainer__skill">
-                    <h2>github</h2>
-                  </div>
-                </div>
+              <div
+                class="headerwrapper__title__btn"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              >
+                <a href=""><button>Recruit me</button></a>
+              </div>
+            </div>
+            <div class="headerwrapper__avatar">
+              <img
+                src="silly wave.png"
+                alt=""
+                height="250px"
+                data-aos="fade"
+                data-aos-duration="2000"
+                data-aos-easing="ease"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="section black-div">
+        <div id="sectionabout" class="sectionabout">
+          <div class="sectionabout__avatar">
+            <img src="lotus pose.png" alt="" height="250px" id="image" />
+          </div>
+          <div class="sectionabout__about">
+            <h1>Who am i?</h1>
+            <p>
+              Oh, well, well, well, look who we have here! It's AJMAL RAZZAQ
+              BHATTI, the self-proclaimed frontend wizard who's taking the world
+              by storm with his HTML, CSS, SCSS, and JS skills. 💻🎨✨
+            </p>
+            <h1>Skills i have</h1>
+            <div class="sectionabout__about__skillcontainer">
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>html</h2>
+                <p>1 year experiance</p>
+              </div>
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>css</h2>
+                <p>1 year experiance</p>
+              </div>
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>scss</h2>
+                <p>6 months experiance</p>
+              </div>
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>js</h2>
+                <p>6 months experiance</p>
+              </div>
+            </div>
+            <h1>Tools i can use</h1>
+            <div class="sectionabout__about__skillcontainer">
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>vs-code</h2>
+              </div>
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>figma</h2>
+              </div>
+              <div class="sectionabout__about__skillcontainer__skill">
+                <h2>github</h2>
               </div>
             </div>
           </div>
@@ -156,9 +150,7 @@
       </div>
     </div>
 
-    <script src="https://byjaris.com/code/demo/splide-blur/js/jquery.min.js"></script>
-    <script src="https://byjaris.com/code/demo/splide-blur/splide/splide.min.js"></script>
-    <script src="https://byjaris.com/code/demo/splide-blur/splide/splide.video.js"></script>
+    <script src="butter.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

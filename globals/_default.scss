@@ -3,15 +3,29 @@ html {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-
-nav {
-  margin-top: 20px;
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+html::-webkit-scrollbar {
+  overflow: -moz-scrollbars-none;
+  width: 0px;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+#loading {
   position: absolute;
-  display: flex;
+  height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(33, 33, 33, 0.5);
+  backdrop-filter: blur(5em);
 }

@@ -20,18 +20,3 @@ body {
   z-index: -1;
   width: 50%;
 }
-.divider {
-  width: 100%;
-  height: 1px;
-  margin-top: 30px;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  -ms-grid-row-align: stretch;
-  align-self: stretch;
-  border-bottom: 1px dashed hsla(0, 0%, 100%, 0.2);
-}
-
-/* Hide pagination */
-.splide__pagination {
-  display: none;
-}
