@@ -10,16 +10,35 @@
   height: 100vh;
   justify-content: space-between;
   @include breakpoint(900px) {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
   }
   width: 85%;
   margin: 0 auto;
-
+  &__avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    h1 {
+      font-family: $font-tetra;
+      font-size: 44px;
+      color: var(--color-grey);
+      margin: 0;
+      @include breakpoint(900px) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+  }
   &__about {
     width: 50%;
     @include breakpoint(900px) {
       width: 100%;
-      margin: 0;
+      margin: auto 0;
+      height: 60%;
     }
     h1 {
       font-family: $font-tetra;

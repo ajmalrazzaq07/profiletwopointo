@@ -4,20 +4,18 @@
     <meta name="author" content="BCJ Development" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="ResizeSensor.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <title>Butter.js - Smooth Momentum Scrolling</title>
-    <!-- <script src="https://kit.fontawesome.com/1337a25535.js" crossorigin="anonymous"></script> -->
-
-    <link rel="stylesheet" href="sample/butter.css" />
+    <title>Portfolio || Ajmal Razzaq Bhatti</title>
   </head>
   <body>
     <img src="overlay2.svg" alt="" class="bgleft" />
     <div id="loading">
       <svg
-        width="141"
-        height="123"
+        width="91"
+        height="83"
         viewBox="0 0 141 123"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +81,8 @@
                 data-aos-duration="2000"
                 data-aos-easing="ease"
               >
-                Just an introvert Coding his thoughts into designs
+                Just an introvert Coding his thoughts into designs using
+                code,no-code and AI.
               </h3>
               <div
                 class="headerwrapper__title__links"
@@ -119,7 +118,7 @@
                 data-aos-duration="2000"
                 data-aos-easing="ease"
               >
-                <a href=""><button>Recruit me</button></a>
+                <a href=""><button>Let's Talk</button></a>
               </div>
             </div>
             <div class="headerwrapper__avatar">
@@ -133,7 +132,7 @@
               />
             </div>
           </div>
-          <a onclick="slide()">
+          <a id="scrollLink" href="#sectionabout" onclick="slide()">
             <img src="scroll.svg" alt="" class="scroll"
           /></a>
         </header>
@@ -141,17 +140,47 @@
       <div class="section">
         <div id="sectionabout" class="sectionabout">
           <div class="sectionabout__avatar">
-            <img src="lotus pose.png" alt="" height="250px" id="image" />
+            <img
+              src="lotus pose.png"
+              alt=""
+              height="250px"
+              id="image"
+              data-aos="fade"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            />
+            <h1>About Me</h1>
           </div>
           <div class="sectionabout__about">
-            <h1>Who am i?</h1>
-            <p>
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
+              Who am i?
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
               Oh, well, well, well, look who we have here! It's AJMAL RAZZAQ
               BHATTI, the self-proclaimed frontend wizard who's taking the world
-              by storm with his HTML, CSS, SCSS, and JS skills. 💻🎨✨
+              by storm.
             </p>
-            <h1>Skills i have</h1>
-            <div class="sectionabout__about__skillcontainer">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
+              Skills i have
+            </h1>
+            <div
+              class="sectionabout__about__skillcontainer"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
               <div class="sectionabout__about__skillcontainer__skill">
                 <h2>html</h2>
                 <p>1 year experiance</p>
@@ -169,8 +198,19 @@
                 <p>6 months experiance</p>
               </div>
             </div>
-            <h1>Tools i can use</h1>
-            <div class="sectionabout__about__skillcontainer">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
+              Tools i can use
+            </h1>
+            <div
+              class="sectionabout__about__skillcontainer"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-easing="ease"
+            >
               <div class="sectionabout__about__skillcontainer__skill">
                 <h2>vs-code</h2>
               </div>
@@ -184,9 +224,20 @@
           </div>
         </div>
       </div>
+      <div class="section">
+        <div class="projectssection">
+          <div class="projectssection__portfolio" id="repositories"></div>
+          <div class="projectssection__sidebar">
+            <img src="suave .png" alt="" height="250px" />
+            <h1>Projects</h1>
+          </div>
+        </div>
+      </div>
+      <div class="section"></div>
     </div>
 
     <script src="butter.js"></script>
     <script src="script.js"></script>
+    <script src="sticky-sidebar.js"></script>
   </body>
 </html>

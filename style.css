@@ -9,20 +9,35 @@ html {
 .section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  position: unset;
 }
 
 html::-webkit-scrollbar {
   overflow: -moz-scrollbars-none;
   width: 0px;
+  background: transparent;
+  -webkit-appearance: none;
+  display: none;
 }
 
 body::-webkit-scrollbar {
   width: 0px;
+  overflow: -moz-scrollbars-none;
+  background: transparent;
+  display: none;
+  -webkit-appearance: none;
+}
+
+div::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  overflow: -moz-scrollbars-none;
+  -webkit-appearance: none;
+  display: none;
 }
 
 #loading {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -30,9 +45,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  background: rgba(33, 33, 33, 0.5);
-  -webkit-backdrop-filter: blur(5em);
-          backdrop-filter: blur(5em);
+  background: rgb(33, 33, 33);
 }
 
 /***************************************************
@@ -123,13 +136,13 @@ body::-webkit-scrollbar {
   --color-dark: #00050b;
   --color-grey: #747474;
   --color-white: #ffffff;
-  --color-pink: rgb(225, 29, 72, 0.5);
+  --color-border: rgba(63, 63, 70, 0.4);
 }
 
 body {
   background-color: var(--color-dark);
   height: 100vh;
-  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
 .image-5 {
@@ -271,7 +284,28 @@ header {
 }
 @media (max-width: 900px) {
   .sectionabout {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sectionabout__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.sectionabout__avatar h1 {
+  font-family: "Rza";
+  font-size: 44px;
+  color: var(--color-grey);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .sectionabout__avatar h1 {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 .sectionabout__about {
@@ -280,7 +314,8 @@ header {
 @media (max-width: 900px) {
   .sectionabout__about {
     width: 100%;
-    margin: 0;
+    margin: auto 0;
+    height: 60%;
   }
 }
 .sectionabout__about h1 {
@@ -320,4 +355,78 @@ header {
   font-size: 14px;
   font-family: "Product Sans";
   text-transform: capitalize;
+}
+
+.projectssection {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .projectssection {
+    justify-content: space-around;
+    gap: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+}
+.projectssection__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.projectssection__sidebar h1 {
+  font-family: "Rza";
+  font-size: 44px;
+  color: var(--color-grey);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .projectssection__sidebar h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.projectssection__portfolio {
+  width: 400px;
+  display: flex;
+  overflow: scroll;
+  flex-direction: row;
+  gap: 10px;
+}
+.projectssection__portfolio__card {
+  padding: 10px;
+  width: 350px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid var(--color-border);
+  background: rgba(33, 33, 33, 0.5);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+}
+.projectssection__portfolio__card .row {
+  display: flex;
+}
+.projectssection__portfolio__card h3 {
+  color: var(--color-red);
+  font-family: "Rza";
+  text-transform: capitalize;
+}
+.projectssection__portfolio__card p {
+  color: var(--color-grey);
+  font-size: 15px;
+  margin: 10px 0px;
+  line-height: 1.4em;
+  font-family: "Product Sans";
 }/*# sourceMappingURL=style.css.map */

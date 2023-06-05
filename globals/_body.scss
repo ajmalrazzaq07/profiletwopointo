@@ -2,7 +2,7 @@
 body {
   background-color: var(--color-dark);
   height: 100vh;
-  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 .image-5 {
   position: fixed;
