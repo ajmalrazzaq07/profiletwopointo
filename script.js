@@ -43,6 +43,8 @@ var isMobile =
 var scrollLink = document.getElementById("scrollLink");
 if (isMobile) {
   scrollLink.removeAttribute("onclick");
+
+  scrollLink.setAttribute("href", "#sectionabout");
   window.scrollBy(0, -800);
   // Set scroll behavior to smooth
   document.documentElement.style.scrollBehavior = "smooth";

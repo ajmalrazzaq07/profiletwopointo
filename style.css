@@ -106,6 +106,29 @@ div::-webkit-scrollbar {
   animation: animate-svg-stroke-4 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s both;
 }
 
+.scroll {
+  cursor: pointer;
+}
+
+.icon {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon:hover {
+  filter: brightness(100);
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.05) scaleY(1.05);
+}
+
+.scroll {
+  position: relative;
+  top: 34px;
+}
+.scroll:hover {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.05) scaleY(1.05);
+}
+
 @font-face {
   font-family: "Product Sans";
   font-style: normal;
@@ -131,12 +154,19 @@ div::-webkit-scrollbar {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Recoleta Regular";
+  src: url(https://nmanumr.com/fonts/Recoleta-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-red: #e11d48;
   --color-dark: #00050b;
   --color-grey: #747474;
   --color-white: #ffffff;
-  --color-border: rgba(63, 63, 70, 0.4);
+  --color-border: rgba(55, 55, 55, 0.4);
 }
 
 body {
@@ -146,7 +176,7 @@ body {
 }
 
 .image-5 {
-  position: fixed;
+  position: absolute;
   left: auto;
   top: 0;
   right: 0;
@@ -162,13 +192,18 @@ body {
   z-index: -1;
   width: 50%;
 }
+@media (max-width: 900px) {
+  .bgleft {
+    position: absolute;
+  }
+}
 
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -180,44 +215,35 @@ header {
   align-items: center;
   width: 85%;
   margin: 0 auto;
-  justify-content: space-between;
-  flex: 1;
-  background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
-  background-position: 50% 50%;
-  background-size: 50%;
-  background-repeat: no-repeat;
+  justify-content: center;
 }
 @media (max-width: 900px) {
   .headerwrapper {
-    align-items: flex-start;
-  }
-}
-@media (max-width: 900px) {
-  .headerwrapper {
-    background-size: 100%;
+    width: 100%;
   }
 }
 .headerwrapper__title {
   display: flex;
+  text-align: center;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  justify-self: self-start;
+  align-items: center;
 }
 .headerwrapper__title__logo {
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin: 10px 0px;
+}
+.headerwrapper__title__logo:hover {
+  transform: scale(1.02);
 }
 .headerwrapper__title__links {
   margin: 30px 0px;
-  align-self: self-start;
 }
 .headerwrapper__title__links a {
   text-decoration: none;
-}
-@media (max-width: 900px) {
-  .headerwrapper__title {
-    align-self: self-start;
-  }
 }
 .headerwrapper__title__btn {
   margin: 0;
@@ -228,21 +254,24 @@ header {
   border: none;
   border-radius: 10000px;
   height: 36px;
-  padding: 0px 18px;
+  padding: 0px 20px;
   font-size: 14px;
   font-family: "Product Sans";
   -webkit-backdrop-filter: 8px;
           backdrop-filter: 8px;
-  transition: all 1s ease-out;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .headerwrapper__title__btn button:hover {
-  background: var(--color-white);
-  color: black;
+  background: #fff;
+  color: var(--color-dark);
+  padding: 0px 25px;
 }
 .headerwrapper__title h1 {
-  font-family: "Rza";
-  font-size: 54px;
+  font-family: "Recoleta Regular";
+  font-size: 3.74rem;
+  font-weight: 400;
   color: white;
   margin: 0;
 }
@@ -255,106 +284,134 @@ header {
 .headerwrapper__title h2 {
   color: var(--color-red);
   font-size: 17px;
-  margin: 5px 0px;
+  margin: 10px 0px;
   font-family: "Product Sans";
   font-weight: 400;
 }
 .headerwrapper__title h3 {
-  margin: 10px 0px;
   color: var(--color-grey);
   font-size: 14px;
   font-family: "Roboto Mono", monospace;
+  line-height: 1.5rem;
   text-transform: capitalize;
-}
-.headerwrapper__avatar {
-  margin: 0 auto;
 }
 
 .sectionabout {
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  overflow: auto;
-  height: 100vh;
-  justify-content: space-between;
   width: 85%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 900px) {
   .sectionabout {
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
 }
-.sectionabout__avatar {
+.sectionabout__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
+  overflow: hidden;
+  justify-content: center;
 }
-.sectionabout__avatar h1 {
-  font-family: "Rza";
-  font-size: 44px;
-  color: var(--color-grey);
-  margin: 0;
-}
-@media (max-width: 900px) {
-  .sectionabout__avatar h1 {
-    font-size: 30px;
-    line-height: 36px;
-  }
-}
-.sectionabout__about {
-  width: 50%;
-}
-@media (max-width: 900px) {
-  .sectionabout__about {
-    width: 100%;
-    margin: auto 0;
-    height: 60%;
-  }
-}
-.sectionabout__about h1 {
-  font-family: "Rza";
-  font-size: 44px;
-  color: white;
-  margin: 0;
-  color: var(--color-red);
-}
-@media (max-width: 900px) {
-  .sectionabout__about h1 {
-    font-size: 30px;
-    line-height: 36px;
-  }
-}
-.sectionabout__about p {
-  color: var(--color-grey);
-  font-size: 15px;
-  margin: 10px 0px;
-  line-height: 1.4em;
-  font-family: "Product Sans";
-}
-.sectionabout__about__skillcontainer {
+.sectionabout__who {
   display: flex;
-  margin: 10px 3px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.sectionabout__who__logo {
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 20px 0px;
+}
+.sectionabout__who__logo:hover {
+  transform: scale(1.02);
+}
+.sectionabout__who h1 {
+  text-align: center;
+  color: var(--color-white);
+  font-family: "Recoleta Regular";
+}
+.sectionabout__who h1::first-letter {
+  color: var(--color-red);
+  font-size: 50px;
+  font-family: "Recoleta Regular";
+}
+@media (max-width: 900px) {
+  .sectionabout__who h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.sectionabout__who p {
+  margin: 20px 0px;
+  max-width: 600px;
+  font-family: "Product Sans";
+  color: var(--color-grey);
+  text-transform: capitalize;
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  .sectionabout__who p {
+    font-size: 14px;
+  }
+}
+.sectionabout__skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.sectionabout__skills h1 {
+  font-family: "Recoleta Regular";
+  color: var(--color-white);
+  margin-top: 20px;
+}
+@media (max-width: 900px) {
+  .sectionabout__skills h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.sectionabout__skills__wrapper {
+  display: flex;
+  justify-content: center;
   flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
   gap: 20px;
 }
-.sectionabout__about__skillcontainer__skill h2 {
-  color: var(--color-white);
-  font-family: "Product Sans";
-  font-weight: 400;
-  font-size: 17px;
-  text-transform: capitalize;
+.sectionabout__skills__wrapper .skill {
+  border: 1px solid #212121;
+  width: 180px;
+  background-color: rgba(19, 19, 19, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backdrop-filter: blur(2em);
+          backdrop-filter: blur(2em);
+  cursor: pointer;
 }
-.sectionabout__about__skillcontainer__skill p {
-  font-size: 14px;
+.sectionabout__skills__wrapper .skill:hover {
+  transform: scale(1.05);
+  background-color: #131313;
+}
+.sectionabout__skills__wrapper .skill h3 {
+  font-family: "Recoleta Regular";
+  color: var(--color-red);
+  font-weight: 400;
+}
+.sectionabout__skills__wrapper .skill p {
+  color: var(--color-grey);
   font-family: "Product Sans";
-  text-transform: capitalize;
+  font-size: 14px;
 }
 
 .projectssection {
@@ -363,70 +420,21 @@ header {
   flex-direction: row;
   height: 100vh;
   align-items: center;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
-}
-@media (max-width: 900px) {
-  .projectssection {
-    justify-content: space-around;
-    gap: 30px;
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 100%;
-  }
-}
-.projectssection__sidebar {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  align-items: center;
 }
-.projectssection__sidebar h1 {
-  font-family: "Rza";
-  font-size: 44px;
-  color: var(--color-grey);
-  margin: 0;
+.projectssection__wrapper h1 {
+  text-align: center;
+  color: var(--color-white);
+  font-family: "Recoleta Regular";
+}
+.projectssection__wrapper h1::first-letter {
+  color: var(--color-red);
+  font-size: 50px;
+  font-family: "Recoleta Regular";
 }
 @media (max-width: 900px) {
-  .projectssection__sidebar h1 {
+  .projectssection__wrapper h1 {
     font-size: 30px;
     line-height: 36px;
   }
-}
-.projectssection__portfolio {
-  width: 400px;
-  display: flex;
-  overflow: scroll;
-  flex-direction: row;
-  gap: 10px;
-}
-.projectssection__portfolio__card {
-  padding: 10px;
-  width: 350px;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  border: 1px solid var(--color-border);
-  background: rgba(33, 33, 33, 0.5);
-  -webkit-backdrop-filter: blur(2rem);
-          backdrop-filter: blur(2rem);
-}
-.projectssection__portfolio__card .row {
-  display: flex;
-}
-.projectssection__portfolio__card h3 {
-  color: var(--color-red);
-  font-family: "Rza";
-  text-transform: capitalize;
-}
-.projectssection__portfolio__card p {
-  color: var(--color-grey);
-  font-size: 15px;
-  margin: 10px 0px;
-  line-height: 1.4em;
-  font-family: "Product Sans";
 }/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0 auto;
 }
 .headerwrapper {
@@ -16,38 +16,34 @@ header {
   align-items: center;
   width: 85%;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
+
   @include breakpoint(900px) {
-    align-items: flex-start;
-  }
-  flex: 1;
-  background-image: url("https://uploads-ssl.webflow.com/5d0612b585f49bec2da61fb2/6046517ffb635696dd46dc48_Hi.svg");
-  background-position: 50% 50%;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  @include breakpoint(900px) {
-    background-size: 100%;
+    width: 100%;
   }
   &__title {
     display: flex;
+    text-align: center;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    justify-self: self-start;
+    align-items: center;
     &__logo {
+      cursor: pointer;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       margin: 10px 0px;
+      &:hover {
+        transform: scale(1.02);
+      }
     }
     &__links {
       margin: 30px 0px;
-      align-self: self-start;
       a {
         text-decoration: none;
       }
     }
 
-    @include breakpoint(900px) {
-      align-self: self-start;
-    }
     &__btn {
       margin: 0;
       button {
@@ -56,21 +52,24 @@ header {
         border: none;
         border-radius: 10000px;
         height: 36px;
-        padding: 0px 18px;
+        padding: 0px 20px;
         font-size: 14px;
         font-family: $font-tertiary;
         backdrop-filter: 8px;
-        transition: all 1s ease-out;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         &:hover {
-          background: var(--color-white);
-          color: black;
+          background: #fff;
+          color: var(--color-dark);
+          padding: 0px 25px;
         }
       }
     }
     h1 {
       font-family: $font-tetra;
-      font-size: 54px;
+      font-size: 3.74rem;
+      font-weight: 400;
       color: white;
       margin: 0;
       @include breakpoint(900px) {
@@ -81,19 +80,16 @@ header {
     h2 {
       color: var(--color-red);
       font-size: 17px;
-      margin: 5px 0px;
+      margin: 10px 0px;
       font-family: $font-tertiary;
       font-weight: 400;
     }
     h3 {
-      margin: 10px 0px;
       color: var(--color-grey);
       font-size: 14px;
       font-family: $font-penta;
+      line-height: 1.5rem;
       text-transform: capitalize;
     }
-  }
-  &__avatar {
-    margin: 0 auto;
   }
 }

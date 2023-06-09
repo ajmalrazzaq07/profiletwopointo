@@ -172,3 +172,25 @@ div::-webkit-scrollbar {
   animation: animate-svg-stroke-4 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s
     both;
 }
+.scroll {
+  cursor: pointer;
+}
+.icon {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    filter: brightness(100);
+    transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.05)
+      scaleY(1.05);
+  }
+}
+.scroll {
+  position: relative;
+  top: 34px;
+  &:hover {
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.05)
+      scaleY(1.05);
+  }
+}
