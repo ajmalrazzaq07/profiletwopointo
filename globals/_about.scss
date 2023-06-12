@@ -66,6 +66,7 @@
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+    padding: 0px 0px 80px 0px;
 
     h1 {
       font-family: $font-tetra;
@@ -86,7 +87,7 @@
       padding: 10px;
       gap: 20px;
       .skill {
-        border: 1px solid #212121;
+        border: 1.5px solid #212121;
         width: 180px;
         background-color: rgba($color: #131313, $alpha: 0.4);
         padding: 20px;
@@ -95,6 +96,7 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(2em);
         cursor: pointer;
+        z-index: 9999;
 
         &:hover {
           transform: scale(1.05);

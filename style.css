@@ -366,6 +366,7 @@ header {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  padding: 0px 0px 80px 0px;
 }
 .sectionabout__skills h1 {
   font-family: "Recoleta Regular";
@@ -388,7 +389,7 @@ header {
   gap: 20px;
 }
 .sectionabout__skills__wrapper .skill {
-  border: 1px solid #212121;
+  border: 1.5px solid #212121;
   width: 180px;
   background-color: rgba(19, 19, 19, 0.4);
   padding: 20px;
@@ -398,6 +399,7 @@ header {
   -webkit-backdrop-filter: blur(2em);
           backdrop-filter: blur(2em);
   cursor: pointer;
+  z-index: 9999;
 }
 .sectionabout__skills__wrapper .skill:hover {
   transform: scale(1.05);
@@ -419,22 +421,60 @@ header {
   position: relative;
   flex-direction: row;
   height: 100vh;
-  align-items: center;
   justify-content: center;
+  width: 85%;
+  margin: 0 auto;
 }
-.projectssection__wrapper h1 {
+.projectssection__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.projectssection__wrapper__title {
   text-align: center;
   color: var(--color-white);
   font-family: "Recoleta Regular";
 }
-.projectssection__wrapper h1::first-letter {
+.projectssection__wrapper__title::first-letter {
   color: var(--color-red);
   font-size: 50px;
   font-family: "Recoleta Regular";
 }
 @media (max-width: 900px) {
-  .projectssection__wrapper h1 {
+  .projectssection__wrapper__title {
     font-size: 30px;
     line-height: 36px;
   }
+}
+.projectssection__wrapper__container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.projectssection__wrapper__container__card {
+  width: 55%;
+  height: 300px;
+  border: 1.6px solid #212121;
+  background-color: rgba(19, 19, 19, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+  gap: 10px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backdrop-filter: blur(2em);
+          backdrop-filter: blur(2em);
+}
+.projectssection__wrapper__container__card__section {
+  width: 50%;
+}
+.projectssection__wrapper__container__card__section h2 {
+  margin: 10px 0px;
+  font-family: "Recoleta Regular";
 }/*# sourceMappingURL=style.css.map */

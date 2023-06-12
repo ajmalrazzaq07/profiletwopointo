@@ -5,10 +5,16 @@
   position: relative;
   flex-direction: row;
   height: 100vh;
-  align-items: center;
   justify-content: center;
+  width: 85%;
+  margin: 0 auto;
   &__wrapper {
-    h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    &__title {
       text-align: center;
       color: var(--color-white);
       font-family: $font-tetra;
@@ -23,7 +29,32 @@
       }
     }
     &__container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
       &__card {
+        width: 55%;
+        height: 300px;
+        border: 1.6px solid #212121;
+        background-color: rgba($color: #131313, $alpha: 0.4);
+        padding: 20px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        transition-duration: 0.2s;
+        gap: 10px;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(2em);
+        &__section {
+          width: 50%;
+          h2 {
+            margin: 10px 0px;
+            font-family: $font-tetra;
+          }
+        }
       }
     }
   }
