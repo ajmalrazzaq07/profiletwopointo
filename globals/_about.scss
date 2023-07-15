@@ -67,7 +67,18 @@
     gap: 40px;
     flex-wrap: wrap;
     padding: 0px 0px 80px 0px;
-
+    .skill__text {
+      margin: 20px 0px;
+      max-width: 600px;
+      font-family: $font-tertiary;
+      color: var(--color-grey);
+      text-transform: capitalize;
+      font-size: 16px;
+      text-align: center;
+      @include breakpoint(900px) {
+        font-size: 14px;
+      }
+    }
     h1 {
       font-family: $font-tetra;
       color: var(--color-white);

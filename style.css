@@ -368,6 +368,20 @@ header {
   flex-wrap: wrap;
   padding: 0px 0px 80px 0px;
 }
+.sectionabout__skills .skill__text {
+  margin: 20px 0px;
+  max-width: 600px;
+  font-family: "Product Sans";
+  color: var(--color-grey);
+  text-transform: capitalize;
+  font-size: 16px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .sectionabout__skills .skill__text {
+    font-size: 14px;
+  }
+}
 .sectionabout__skills h1 {
   font-family: "Recoleta Regular";
   color: var(--color-white);
@@ -448,6 +462,17 @@ header {
     line-height: 36px;
   }
 }
+.projectssection__wrapper__cal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.projectssection__wrapper__cal__subtitle {
+  text-align: center;
+}
+.projectssection__wrapper__cal__subtitle span {
+  font-size: 60px;
+}
 .projectssection__wrapper__container {
   display: flex;
   justify-content: space-around;
@@ -455,12 +480,12 @@ header {
   flex-wrap: wrap;
 }
 .projectssection__wrapper__container__card {
-  width: 55%;
+  aspect-ratio: 1;
+  width: 80%;
   height: 300px;
   border: 1.6px solid #212121;
   background-color: rgba(19, 19, 19, 0.4);
   padding: 20px;
-  border-radius: 16px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -472,7 +497,13 @@ header {
           backdrop-filter: blur(2em);
 }
 .projectssection__wrapper__container__card__section {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectssection__wrapper__container__card__section img {
+  position: relative;
 }
 .projectssection__wrapper__container__card__section h2 {
   margin: 10px 0px;

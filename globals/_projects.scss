@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+
     &__title {
       text-align: center;
       color: var(--color-white);
@@ -28,18 +29,29 @@
         line-height: 36px;
       }
     }
+    &__cal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      &__subtitle {
+        text-align: center;
+        span {
+          font-size: 60px;
+        }
+      }
+    }
     &__container {
       display: flex;
       justify-content: space-around;
       width: 100%;
       flex-wrap: wrap;
       &__card {
-        width: 55%;
+        aspect-ratio: 1;
+        width: 80%;
         height: 300px;
         border: 1.6px solid #212121;
         background-color: rgba($color: #131313, $alpha: 0.4);
         padding: 20px;
-        border-radius: 16px;
         display: flex;
         flex-direction: row;
         overflow: hidden;
@@ -49,7 +61,13 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(2em);
         &__section {
-          width: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            position: relative;
+          }
           h2 {
             margin: 10px 0px;
             font-family: $font-tetra;
